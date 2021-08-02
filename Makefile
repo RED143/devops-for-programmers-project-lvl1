@@ -6,3 +6,12 @@ start:
 
 bash:
 	docker run -ti app bash
+
+install:
+	docker-compose run app npm install
+
+test:
+	docker-compose -f docker-compose.yml up --abort-on-container-exit
+
+run:
+	docker-compose up
