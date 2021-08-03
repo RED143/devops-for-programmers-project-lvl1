@@ -10,8 +10,11 @@ bash:
 install:
 	docker-compose run app npm install
 
-test:
+build-prod:
+	docker build -t red143/devops-for-programmers-project-lvl1 -f Dockerfile.production .
+
+start-prod:
 	docker-compose -f docker-compose.yml up --abort-on-container-exit
 
-run:
-	docker-compose up
+start-local:
+	docker-compose -f docker-compose.override.yml up

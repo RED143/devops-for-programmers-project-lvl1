@@ -4,8 +4,5 @@ services:
   app:
     build:
       context: .
-      dockerfile: Dockerfile
-    working_dir: /app
+      dockerfile: Dockerfile.production
     command: ["npm", "test"]
-    volumes:
-      - "./app:/app"
