@@ -2,7 +2,7 @@ name: run tests and deploy
 on: push
 jobs:
   test-and-deploy:
-    runs-on: ubuntu-lastest
+    runs-on: ubuntu-latest
     steps:
       - name: Clone repo
         uses: actions/checkout@v2
