@@ -18,3 +18,6 @@ test-prod:
 
 start-local:
 	docker-compose -f docker-compose.override.yml up
+
+push:
+	docker push red143/devops-for-programmers-project-lvl1
