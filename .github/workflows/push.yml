@@ -7,13 +7,5 @@ jobs:
       - name: Clone repo
         uses: actions/checkout@v2
 
-      - name: Try echo something
-        run: |
-          echo something!!
-          ls -la
-
       - name: Run tests
         run: make test-prod
-
-      - name: After tests
-        run: echo after tests
