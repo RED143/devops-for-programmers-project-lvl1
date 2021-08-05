@@ -13,7 +13,7 @@ install:
 build-prod:
 	docker build -t red143/devops-for-programmers-project-lvl1 -f Dockerfile.production .
 
-start-prod:
+test-prod:
 	docker-compose -f docker-compose.yml up --abort-on-container-exit
 
 start-local:

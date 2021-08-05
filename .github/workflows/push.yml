@@ -1,0 +1,19 @@
+name: run tests and deploy
+on: push
+jobs:
+  test-and-deploy:
+    runs-on: ubuntu-lastest
+    steps:
+      - name: Clone repo
+        uses: actions/checkout@v2
+
+      - name: Try echo something
+        run: |
+          echo something!!
+          ls -la
+
+      - name: Run tests
+        run: make test-prod
+
+      - name: After tests
+        run: echo after tests
