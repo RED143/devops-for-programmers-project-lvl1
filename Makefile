@@ -17,7 +17,7 @@ test-prod:
 	docker-compose -f docker-compose.yml up --abort-on-container-exit
 
 start-local:
-	docker-compose -f docker-compose.override.yml up
+	docker-compose up
 
 push:
 	docker push red143/devops-for-programmers-project-lvl1
