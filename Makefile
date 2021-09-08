@@ -1,8 +1,5 @@
-build:
-	docker build -t app .
-
 start:
-	docker run -d -p 8080:8080 app
+	docker-compose up
 
 bash:
 	docker run -ti app bash
@@ -10,14 +7,11 @@ bash:
 install:
 	docker-compose run app npm install
 
-build-prod:
+build:
 	docker build -t red143/devops-for-programmers-project-lvl1 -f Dockerfile.production .
 
-test-prod:
+test:
 	docker-compose -f docker-compose.yml up --abort-on-container-exit
-
-start-local:
-	docker-compose -f docker-compose.override.yml up
 
 push:
 	docker push red143/devops-for-programmers-project-lvl1
